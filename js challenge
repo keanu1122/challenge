@@ -1,0 +1,54 @@
+function cekHoki(n) {
+  if (n % 2 === 0 && n % 7 === 0) {
+    console.log("HOKI");
+  } else {
+    console.log("BIASA");
+  }
+}
+
+function hitungTabungan(hari) {
+  let total = 0;
+  for (let i = 1; i <= hari; i++) {
+    if (i % 2 !== 0) {
+      total += 2000;
+    } else {
+      total += 5000;
+    }
+  }
+  return total;
+}
+
+function cekTilang(plat, tanggal) {
+  if (plat % 2 === tanggal % 2) {
+    console.log("AMAN");
+  } else {
+    console.log("TILANG");
+  }
+}
+
+function hitungKopi(jumlahGelas) {
+  let total = jumlahGelas * 5000;
+  if (jumlahGelas > 3) {
+    total -= 2000;
+  }
+  return total;
+}
+
+function tepokNyamuk(jumlah) {
+  for (let i = 1; i <= jumlah; i++) {
+    if (i % 3 === 0) {
+      console.log("TEPOK");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+cekHoki(14);
+cekHoki(10);
+console.log(hitungTabungan(3));
+cekTilang(24, 12);
+cekTilang(13, 20);
+console.log(hitungKopi(2));
+console.log(hitungKopi(4));
+tepokNyamuk(5);
