@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+void cekHoki(int n) {
+    if (n % 2 == 0 && n % 7 == 0) {
+        cout << "HOKI" << endl;
+    } else {
+        cout << "BIASA" << endl;
+    }
+}
+
+int hitungTabungan(int hari) {
+    int total = 0;
+    for (int i = 1; i <= hari; i++) {
+        if (i % 2 != 0) {
+            total += 2000;
+        } else {
+            total += 5000;
+        }
+    }
+    return total;
+}
+
+void cekTilang(int plat, int tanggal) {
+    if ((plat % 2) == (tanggal % 2)) {
+        cout << "AMAN" << endl;
+    } else {
+        cout << "TILANG" << endl;
+    }
+}
+
+int hitungKopi(int jumlahGelas) {
+    int total = jumlahGelas * 5000;
+    if (jumlahGelas > 3) {
+        total -= 2000;
+    }
+    return total;
+}
+
+void tepokNyamuk(int jumlah) {
+    for (int i = 1; i <= jumlah; i++) {
+        if (i % 3 == 0) {
+            cout << "TEPOK" << endl;
+        } else {
+            cout << i << endl;
+        }
+    }
+}
+
+int main() {
+    cekHoki(14);
+    cekHoki(10);
+    cout << hitungTabungan(3) << endl;
+    cekTilang(24, 12);
+    cekTilang(13, 20);
+    cout << hitungKopi(2) << endl;
+    cout << hitungKopi(4) << endl;
+    tepokNyamuk(5);
+    return 0;
+}
